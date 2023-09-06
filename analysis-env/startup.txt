@@ -1,0 +1,7 @@
+python3 -m venv analysis-env //these commands are on the 'authenticating with the Spotify API' yt video
+source analysis-env/bin/activate
+python3 -m pip install spotipy --upgrade pip // only do this first time running the program
+SPOTIPY_CLIENT_ID = '' // find this and the client secret on your https://developer.spotify.com/dashboard
+SPOTIPY_CLIENT_SECRET = '' //run export SPOTIPY_CLIENT_ID='' and same with the secret
+SPOTIPY_REDIRECT_URI =https://localhost:8888/callback
+$ deactivate to exit

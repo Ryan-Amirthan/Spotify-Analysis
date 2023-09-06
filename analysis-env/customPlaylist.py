@@ -8,6 +8,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope))
 
 offset = 0
 songs = []
+topSongs = []
 items = []
 ids = []
 while True: #API can only extract 50 songs at a time, looping saved tracks by 50 songs
@@ -23,4 +24,6 @@ for idx, item in enumerate(songs): #loops through songs list and prints song det
     print(idx, track['artists'][0]['name'], " – ", track['name'])
 
 
+for song in songs:
+    ids.append(song['track']['id'])
 
